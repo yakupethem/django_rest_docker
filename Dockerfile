@@ -6,4 +6,4 @@ WORKDIR /code
 COPY . /code/
 RUN pip install -r requirements.txt
 EXPOSE 8080
-CMD ["gunicorn","--chdir","django_rest_framework-master","--bind",":8000","blog.wsgi:application","--reload"]
+CMD ["gunicorn","--chdir","django_rest_framework-master","--bind",":8080","blog.wsgi:application","--reload"]
