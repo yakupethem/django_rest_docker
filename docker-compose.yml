@@ -3,9 +3,9 @@ services:
   djangoapp:
     build: .
     volumes: 
-      - .:/code
-      - static_volume:/opt/services/djangoapp/static
-      - media_volume:/opt/services/djangoapp/media
+      - .: /code
+      - static_volume: /opt/services/djangoapp/static
+      - media_volume: /opt/services/djangoapp/media
     networks: 
       - nginx_network
       - databasepostgresql_network
@@ -16,9 +16,9 @@ services:
     ports: 
       - 8080:80
     volumes: 
-      - ./config/nginx/conf.d:etc/nginx/conf.d
-      - static_volume:/opt/services/djangoapp/static
-      - media_volume:/opt/services/djangoapp/media
+      - ./config/nginx/conf.d: /etc/nginx/conf.d
+      - static_volume: /opt/services/djangoapp/static
+      - media_volume: /opt/services/djangoapp/media
     depends_on: 
       - djangoapp
     networks: 
@@ -30,7 +30,7 @@ services:
     networks: 
       - databasepostgresql_network
     volumes: 
-      - databasepostgresql_volume:/var/lib/postgres/data
+      - databasepostgresql_volume: /var/lib/postgres/data
 networks: 
   nginx_network:
     driver: bridge
