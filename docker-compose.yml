@@ -16,7 +16,7 @@ services:
     ports: 
       - 8080:80
     volumes: 
-      - ./config/nginx/conf.d:/etc/nginx/conf.d
+      - ./config/nginx/conf.d :/etc/nginx/conf.d
       - static_volume: /opt/services/djangoapp/static
       - media_volume: /opt/services/djangoapp/media
     depends_on: 
