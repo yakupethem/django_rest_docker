@@ -30,7 +30,7 @@ services:
     networks: 
       - databasepostgresql_network
     volumes: 
-      - databasepostgresql_volume: /var/lib/postgres/data
+      - databasepostgresql_volume: /var/lib/postgresql/data
 networks: 
   nginx_network:
     driver: bridge
