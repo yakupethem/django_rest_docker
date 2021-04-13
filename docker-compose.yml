@@ -21,6 +21,7 @@ services:
       - media_volume:/opt/services/djangoapp/media
     depends_on: 
       - djangoapp
+    command: [nginx-debug, '-g', 'daemon off;']
     networks: 
       - nginx_network
   databasepostgresql:
