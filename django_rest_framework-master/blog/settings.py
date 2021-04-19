@@ -28,7 +28,7 @@ SECRET_KEY = "lvy4xe!@n)l3lt$37tosoe@gd^5=8)0kec21o(p*g!0140g!_2"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["0.0.0.0","127.0.0.1","52.59.251.153","64.227.112.30","64.227.112.30:8080"]
+ALLOWED_HOSTS = ["127.0.0.1","64.227.112.30"]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
